@@ -50,8 +50,11 @@
 				</tr>
 
 				<tr>
-					<td><input type="submit" value="search"
-						class="btn btn-primary" /></td>
+					<td>
+						<a href="/" class="btn btn-secondary" >Reset</a>
+					<input type="submit" value="search"
+						class="btn btn-primary" />
+						</td>
 				</tr>
 
 			</table>
@@ -67,6 +70,7 @@
 		<td>Plan Status</td>
 		<td>Start Date</td>
 		<td>End Date</td>
+		<td>Benefit Amount</td>
 		</tr>
 		</thead>
 		<tbody>
@@ -80,7 +84,13 @@
 		<td th:text="${p.planStatus}"></td>
 		<td th:text="${p.planStartDate}"></td>
 		<td th:text="${p.planEndDate}"></td>
+		<td th:text="${p.benifitAmt}"></td>
 		</tr>
+		<tr>
+		<td colspan="8" style="text-align:center" th:if="${p != 0}">
+ no record found
+</td>
+</tr>
 		</tbody>
 		</table>
 		<hr />
